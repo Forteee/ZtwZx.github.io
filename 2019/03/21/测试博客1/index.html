@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="pytorch,">
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="在学习pix2pix pytorch官方代码的过程中，发现了很多函数装饰器的写法，通过查询，发现了以下两个资源介绍的很详细，但是由于时间关系没有深究，记录下：  https://www.cnblogs.com/wangyongsong/p/6750454.html https://www.cnblogs.com/cicaday/p/python-decorator.html   比赛心得和pyt">
-<meta name="keywords" content="DL��Medical Image��Love">
+<meta name="description" content="autograd  To stop a tensor from tracking history, you can call .detach() to detach it from the computation history, and to prevent future computation from being tracked.   To prevent tracking history">
+<meta name="keywords" content="pytorch">
 <meta property="og:type" content="article">
 <meta property="og:title" content="测试博客1">
 <meta property="og:url" content="http://yoursite.com/2019/03/21/测试博客1/index.html">
-<meta property="og:site_name" content="Zhang&#39;s blog">
-<meta property="og:description" content="在学习pix2pix pytorch官方代码的过程中，发现了很多函数装饰器的写法，通过查询，发现了以下两个资源介绍的很详细，但是由于时间关系没有深究，记录下：  https://www.cnblogs.com/wangyongsong/p/6750454.html https://www.cnblogs.com/cicaday/p/python-decorator.html   比赛心得和pyt">
+<meta property="og:site_name" content="叶藏">
+<meta property="og:description" content="autograd  To stop a tensor from tracking history, you can call .detach() to detach it from the computation history, and to prevent future computation from being tracked.   To prevent tracking history">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://bbs.raindi.net/data/attachment/forum/201709/16/212311u0q0qqeshz9g7nx0.png">
-<meta property="og:updated_time" content="2019-03-21T07:32:52.196Z">
+<meta property="og:updated_time" content="2019-03-22T11:59:31.113Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="测试博客1">
-<meta name="twitter:description" content="在学习pix2pix pytorch官方代码的过程中，发现了很多函数装饰器的写法，通过查询，发现了以下两个资源介绍的很详细，但是由于时间关系没有深究，记录下：  https://www.cnblogs.com/wangyongsong/p/6750454.html https://www.cnblogs.com/cicaday/p/python-decorator.html   比赛心得和pyt">
-<meta name="twitter:image" content="http://bbs.raindi.net/data/attachment/forum/201709/16/212311u0q0qqeshz9g7nx0.png">
+<meta name="twitter:description" content="autograd  To stop a tensor from tracking history, you can call .detach() to detach it from the computation history, and to prevent future computation from being tracked.   To prevent tracking history">
 
 
 
@@ -128,7 +126,8 @@
 
 
 
-  <title>测试博客1 | Zhang's blog</title>
+
+  <title>测试博客1 | 叶藏</title>
   
 
 
@@ -158,12 +157,12 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Zhang's blog</span>
+        <span class="site-title">叶藏</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">水，音乐，呼吸；</p>
       
   </div>
 
@@ -243,12 +242,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-schedule">
-          <a href="/schedule/" rel="section">
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
             
-            日程表
+            站点地图
           </a>
         </li>
       
@@ -290,11 +289,11 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ZhangTW">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/yezang.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zhang's blog">
+      <meta itemprop="name" content="叶藏">
     </span>
 
     
@@ -325,6 +324,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/DeepLearning/" itemprop="url" rel="index">
+                    <span itemprop="name">DeepLearning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -352,70 +373,111 @@
       
 
       
-        <ul>
-<li><p>在学习pix2pix pytorch官方代码的过程中，发现了很多函数装饰器的写法，通过查询，发现了以下两个资源介绍的很详细，但是由于时间关系没有深究，记录下：</p>
+        <h3 id="autograd"><a href="#autograd" class="headerlink" title="autograd"></a>autograd</h3><hr>
+<blockquote>
+<p>To stop a tensor from tracking history, you can call .detach() to detach it from the computation history, and to prevent future computation from being tracked.</p>
+</blockquote>
+<blockquote>
+<p>To prevent tracking history (and using memory), you can also wrap the code block in with torch.no_grad():. This can be particularly helpful when evaluating a model because the model may have trainable parameters with requires_grad=True, but for which we don’t need the gradients.</p>
+</blockquote>
+<blockquote>
+<p>There’s one more class which is very important for autograd implementation - a Function.</p>
+</blockquote>
+<blockquote>
+<p>Tensor and Function are interconnected and build up an acyclic graph, that encodes a complete history of computation. Each tensor has a .grad_fn attribute that references a Function that has created the Tensor (except for Tensors created by the user - their grad_fn is None).</p>
+</blockquote>
+<blockquote>
+<p>If you want to compute the derivatives, you can call .backward() on a Tensor. If Tensor is a scalar (i.e. it holds a one element data), you don’t need to specify any arguments to backward(), however if it has more elements, you need to specify a gradient argument that is a tensor of matching shape.</p>
+</blockquote>
+<p>You can also stop autograd from tracking history on Tensors with .requires_grad=True by wrapping the code block in with torch.no_grad():</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span>(x.requires_grad)</span><br><span class="line"><span class="keyword">print</span>((x ** <span class="number">2</span>).requires_grad)</span><br><span class="line"></span><br><span class="line">with torch.no_grad():</span><br><span class="line">    <span class="keyword">print</span>((x ** <span class="number">2</span>).requires_grad)</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Out:</span></span><br><span class="line"></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">True</span></span><br><span class="line"><span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<h3 id="neural-network"><a href="#neural-network" class="headerlink" title="neural network"></a>neural network</h3><hr>
+<p>简单记录一下pipeline：</p>
 <ul>
-<li><a href="https://www.cnblogs.com/wangyongsong/p/6750454.html" target="_blank" rel="noopener">https://www.cnblogs.com/wangyongsong/p/6750454.html</a></li>
-<li><a href="https://www.cnblogs.com/cicaday/p/python-decorator.html" target="_blank" rel="noopener">https://www.cnblogs.com/cicaday/p/python-decorator.html</a></li>
+<li>定义网络，这包括<ul>
+<li>定义网络结构</li>
+<li>定义前向传播</li>
 </ul>
 </li>
-<li><p><a href="https://www.jianshu.com/p/95b6362f58e4/" target="_blank" rel="noopener">比赛心得和pytorch（等）踩得坑</a></p>
-</li>
-<li><a href="https://www.jianshu.com/p/afea092dda1d" target="_blank" rel="noopener">如何在Jupyter Notebook中使用Python虚拟环境</a></li>
-<li>在jupyter notebook中看python版本</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">print(sys.version)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>python assert的应用</li>
-<li>利用torchsummary显示网路结构（注意这里的net必须是cuda版本的）</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> torchsummary <span class="keyword">import</span> summary</span><br><span class="line">model = VGG()</span><br><span class="line">summary(model, (<span class="number">3</span>, <span class="number">256</span>, <span class="number">256</span>), batch_size=<span class="number">1</span>, device=<span class="string">'cuda'</span>) <span class="comment">#注意这里device可以设置为'cpu'取决于你的模型版本</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>Ubuntu 查看 cuda 及 cudnn 版本</li>
-</ul>
-<p>查看 CUDA 版本：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /usr/local/cuda/version.txt</span><br></pre></td></tr></table></figure>
-<p>查看 CUDNN 版本：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2</span><br></pre></td></tr></table></figure>
-<ul>
-<li>pytorch中关于gpu的一些操作</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">torch.device(&apos;cuda:0&apos;)  这个cuda：后的数字是torch.cuda.current_device()的值</span><br><span class="line">torch.cuda.device_count() # 返回可用gpu数量</span><br><span class="line">torch.cuda.current_device() # 返回现在使用的gpu的index</span><br><span class="line">torch.cuda.set_device(device) # 设置现在使用的gpu</span><br><span class="line">torch.cuda.device_count() # 返回可用的gpu数量</span><br><span class="line">torch.cuda.get_device_name(device) # 返回device的名字</span><br><span class="line">device(type=&apos;cuda&apos;, index=4)和device(type=&apos;cuda&apos;)的区别在于后者默认使用当前的device的index</span><br><span class="line">torch.cuda.memory_allocated(device=None) 返回当前使用的gpu占用的内存</span><br></pre></td></tr></table></figure>
-<p><strong>有个问题这里！！！！</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">torch.cuda.set_device(4)</span><br><span class="line">torch.cuda.current_device()  # 显示是4</span><br><span class="line">device = torch.device(&apos;cuda:2&apos;) #这里cuda:2这个数字改了 下一句获取的内存大小会变</span><br><span class="line">torch.cuda.memory_allocated(device)  </span><br><span class="line">torch.cuda.current_device() # 显示还是4？为什么不随着cuda:后面的数字变化呢？</span><br><span class="line"></span><br><span class="line">也就是说</span><br><span class="line">device = torch.device(&apos;cuda:2&apos;) 这一句执行后输出device显示device(type=&apos;cuda&apos;, index=2) 而且torch.cuda.memory_allocated(device)  也输出的是cude：2 的内存。但是get_current_device为什么还是之前的值没有变</span><br></pre></td></tr></table></figure>
-<p><img src="http://bbs.raindi.net/data/attachment/forum/201709/16/212311u0q0qqeshz9g7nx0.png" alt="image"></p>
-<ul>
-<li>print(sys.executable)输出python解释器的位置</li>
-<li>import torch print(torch.<strong>file</strong>)查看包的位置</li>
-<li>python中各种命名不能用<strong>数字开头</strong>！！！</li>
-<li>学习完pix2pix的代码应该补充学习一下这个ABC 基类编写的知识</li>
-<li>python 字符串前面加f是3.6的特性</li>
-<li>看模型是不是在cuda上</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(next(model.parameters()).is_cuda)#False</span><br></pre></td></tr></table></figure>
-<ul>
-<li>data里面的<strong>init</strong>里面的CustomDatasetDataLoader类为什么呀加一个load_data方法 意义何在<br>也可以上网查 python 中 return self的用法</li>
-<li>argparse中action的用法 这个还没有特别清楚 可以再多查查弄清楚</li>
-<li>关于文件夹的一些操作(利用os库)：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">os.listdir() <span class="comment"># 返回这个文件夹下所有文件的名称的列表 不包括后缀！！！</span></span><br><span class="line">os.path.join(path1,path2,...)</span><br><span class="line">len(os.listdir(path))  <span class="comment">#统计文件夹数目</span></span><br><span class="line">os.getcwd()：获得当前工作目录 </span><br><span class="line">os.curdir:返回当前目录（’.’) </span><br><span class="line">os.chdir(dirname):改变工作目录到dirname </span><br><span class="line">os.path.isdir(name):判断name是不是一个目录，name不是目录就返回false </span><br><span class="line">os.path.isfile(name):判断name是不是一个文件，不存在name也返回false </span><br><span class="line">os.path.exists(name):判断是否存在文件或目录name </span><br><span class="line">os.path.getsize(name):获得文件大小，如果name是目录返回<span class="number">0</span> </span><br><span class="line">os.path.abspath(name):获得绝对路径 </span><br><span class="line">os.path.normpath(path):规范path字符串形式 </span><br><span class="line">os.path.split(name):分割文件名与目录（事实上，如果你完全使用目录，它也会将最后一个目录作为文件名而分离，同时它不会判断文件或目录是否存在） </span><br><span class="line">os.path.splitext():分离文件名与扩展名 </span><br><span class="line">os.path.join(path,name):连接目录与文件名或目录 </span><br><span class="line">os.path.basename(path):返回文件名 </span><br><span class="line">os.path.dirname(path):返回文件路径</span><br></pre></td></tr></table></figure>
-<ul>
-<li>python可以通过startswith() 和endswith()方法判断是否以某个字符开头或结尾</li>
-<li>linux 统计文件个数的东西</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">统计当前文件夹下文件的个数，包括子文件夹里的</span><br><span class="line">ls -lR|grep &quot;^-&quot;|wc -l</span><br><span class="line"></span><br><span class="line">统计文件夹下目录的个数，包括子文件夹里的</span><br><span class="line">ls -lR|grep &quot;^d&quot;|wc -l</span><br><span class="line"></span><br><span class="line">统计当前文件夹下文件的个数</span><br><span class="line">ls -l |grep &quot;^-&quot;|wc -l</span><br><span class="line"></span><br><span class="line">统计当前文件夹下目录的个数</span><br><span class="line">ls -l |grep &quot;^d&quot;|wc -l</span><br><span class="line"></span><br><span class="line">统计输出信息的行数</span><br><span class="line">wc -l</span><br><span class="line"></span><br><span class="line">将长列表输出信息过滤一部分，只保留一般文件，如果只保留目录就是 ^d</span><br><span class="line">grep &quot;^-&quot;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>nvidia-smi系列指令详解</li>
-<li>top和htop指令</li>
-<li>jupyter notebook 如何使用虚拟环境</li>
-<li>jupyter notebook 如何更换主题</li>
-<li>python platform库非常好用 比如说查python版本之类的 完了总结之</li>
+<li>处理数据，调用backward</li>
+<li>定义loss</li>
+<li>更新参数</li>
 </ul>
 <hr>
-<p>github项目记录 1</p>
-<h4 id="1-ellisdg-3DUnetCNN"><a href="#1-ellisdg-3DUnetCNN" class="headerlink" title="1. ellisdg/3DUnetCNN"></a>1. ellisdg/3DUnetCNN</h4><h4 id="网址：https-github-com-ellisdg-3DUnetCNN"><a href="#网址：https-github-com-ellisdg-3DUnetCNN" class="headerlink" title="网址：https://github.com/ellisdg/3DUnetCNN"></a>网址：<a href="https://github.com/ellisdg/3DUnetCNN" target="_blank" rel="noopener">https://github.com/ellisdg/3DUnetCNN</a></h4><h4 id="路径：E-学习用-学习书籍-深度学习框架pytorch入门与实践-3DUnetCNN"><a href="#路径：E-学习用-学习书籍-深度学习框架pytorch入门与实践-3DUnetCNN" class="headerlink" title="路径：E:\学习用\学习书籍 深度学习框架pytorch入门与实践\3DUnetCNN"></a>路径：E:\学习用\学习书籍 深度学习框架pytorch入门与实践\3DUnetCNN</h4><h5 id="本实现是3Dunet的最高star实现，但是是kares的版本，主要研究数据格式问题"><a href="#本实现是3Dunet的最高star实现，但是是kares的版本，主要研究数据格式问题" class="headerlink" title="本实现是3Dunet的最高star实现，但是是kares的版本，主要研究数据格式问题"></a>本实现是3Dunet的最高star实现，但是是kares的版本，主要研究数据格式问题</h5><hr>
-<p>github项目记录 2</p>
-<h4 id="2-chyacinth-pytorch-3DCNN-Lung"><a href="#2-chyacinth-pytorch-3DCNN-Lung" class="headerlink" title="2 chyacinth/pytorch_3DCNN_Lung"></a>2 chyacinth/pytorch_3DCNN_Lung</h4><h4 id="网址https-github-com-chyacinth-pytorch-3DCNN-Lung-blob-master-data-py"><a href="#网址https-github-com-chyacinth-pytorch-3DCNN-Lung-blob-master-data-py" class="headerlink" title="网址https://github.com/chyacinth/pytorch_3DCNN_Lung/blob/master/data.py"></a>网址<a href="https://github.com/chyacinth/pytorch_3DCNN_Lung/blob/master/data.py" target="_blank" rel="noopener">https://github.com/chyacinth/pytorch_3DCNN_Lung/blob/master/data.py</a></h4><h5 id="本代码是用来处理luna16数据集的，使之变为3d输出-数据下载：https-wiki-cancerimagingarchive-net-display-Public-LIDC-IDRI"><a href="#本代码是用来处理luna16数据集的，使之变为3d输出-数据下载：https-wiki-cancerimagingarchive-net-display-Public-LIDC-IDRI" class="headerlink" title="本代码是用来处理luna16数据集的，使之变为3d输出 数据下载：https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI"></a>本代码是用来处理luna16数据集的，使之变为3d输出 数据下载：<a href="https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI" target="_blank" rel="noopener">https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI</a></h5><hr>
+<ul>
+<li>梯度下降前要先清空梯度缓冲区</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">net</span><span class="selector-class">.zero_grad</span>()</span><br></pre></td></tr></table></figure>
+<ul>
+<li>torch.nn只支持 mini-batches，也就是说，输入必须是mini-batch of samples，不能是一个单独的sample<ul>
+<li>单独的sample 可以通过input.unsqueeze(0),给强行加一个 假的batch维度。 </li>
+</ul>
+</li>
+</ul>
+<p>可以通过以下代码看下loss是如何创建出来的<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">print</span><span class="params">(<span class="string">'loss 的层级---------&gt;'</span>)</span></span></span><br><span class="line">last_fn = loss<span class="selector-class">.grad_fn</span>    #创建loss的function</span><br><span class="line">while last_fn:</span><br><span class="line">    print(last_fn)</span><br><span class="line">    last_fn = last_fn<span class="selector-class">.next_functions</span>[<span class="number">0</span>][<span class="number">0</span>]  #不断找上一层function</span><br></pre></td></tr></table></figure></p>
+<h3 id="training-a-classifier"><a href="#training-a-classifier" class="headerlink" title="training a classifier"></a>training a classifier</h3><hr>
+<h4 id="关于数据"><a href="#关于数据" class="headerlink" title="关于数据"></a>关于数据</h4><p>对于<strong>image、text、audio或video</strong>类型的data，可以使用使用<strong>标准python库</strong>将数据加载成<em>numpy array</em>的格式，再把<em>array</em>转化为<em>tensor</em>。</p>
+<p>具体的，对于</p>
+<ul>
+<li>image类型使用库包括：Pillow，OpenCV</li>
+<li>audio类型使用库包括：scipy，librosa</li>
+<li>text类型使用库包括：NLTK、SpaCy、或者直接用python逐行读取</li>
+</ul>
+<p>尤其是在<strong>vision</strong>这一块，创建了专门的库<strong><em>torchvision</em></strong>，包括：</p>
+<ul>
+<li>常用数据集的data loader</li>
+<li>图像数据集的 data transformers<blockquote>
+<p><a href="https://pypi.org/project/torchvision/0.1.8/" target="_blank" rel="noopener">torchvision的安装问题。</a></p>
+</blockquote>
+</li>
+</ul>
+<p>tutorial里使用 <strong>CIFAR 10</strong> 数据集，该数据集包括<strong>10</strong>个标注类别，每张图像的size为3 <em> 32 </em> 32</p>
+<h4 id="具体过程"><a href="#具体过程" class="headerlink" title="具体过程"></a>具体过程</h4><ol>
+<li>loading and <strong>normalizing</strong> CIFAR 10</li>
+</ol>
+<p>这里首先的操作是</p>
+<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">transform = transforms.Compose(</span><br><span class="line">    [transforms.ToTensor(),</span><br><span class="line">     transforms.Normalize((<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.5</span>), (<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.5</span>))])</span><br></pre></td></tr></table></figure>
+<p>官网的说明是</p>
+<blockquote>
+<p>The output of torchvision datasets are PILImage images of range [0, 1]. We transform them to Tensors of normalized range [-1, 1].</p>
+</blockquote>
+<p>那么如何理解呢？（这里可以参考<a href="https://blog.csdn.net/tfygg/article/details/73251721" target="_blank" rel="noopener">【pytorch】图像基本操作</a>、<a href="https://www.jianshu.com/p/8da9b24b2fb6" target="_blank" rel="noopener">超简单！pytorch入门教程（四）：准备图片数据集</a>）</p>
+<p>。。。。貌似只是大概理解了，transforms.ToTensor()是把一个图片0-255转化为0-1的数，然后transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))是把tensor归一化为[-1, +1]的范围内，但是这一个函数的具体使用方法还<strong>不是很懂，这里标记一下</strong></p>
+<blockquote>
+<p>transforms.Normalize使用如下公式进行归一化：<br>channel=（channel-mean）/std</p>
+</blockquote>
+<p>也就是说，转化到[0, 1]范围后，减去0.5再除以0.2，相当于乘以2就变成了[-1,1],就这么简单？？</p>
+<p>再来看一下unnormalize的过程：是不是除以2再加0.5.。。。。。emmm 果然是，那么这里的括号中有3个参数应该就是对应每一个channel吧（待验证</p>
+<p>再看这一句，在unnormalize的过程中，具体函数为：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">imshow</span><span class="params">(img)</span></span><span class="symbol">:</span></span><br><span class="line">    img = img / <span class="number">2</span> + <span class="number">0</span>.<span class="number">5</span>     <span class="comment"># unnormalize</span></span><br><span class="line">    npimg = img.numpy()</span><br><span class="line">    plt.imshow(np.transpose(npimg, (<span class="number">1</span>, <span class="number">2</span>, <span class="number">0</span>)))</span><br><span class="line">    plt.show()</span><br></pre></td></tr></table></figure>
+<p>那么这一句plt.imshow(np.transpose(npimg, (1, 2, 0)))是什么用呢？？？</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">torchvision<span class="selector-class">.utils</span><span class="selector-class">.make_grid</span>(images)</span><br></pre></td></tr></table></figure>
+<p>这一句什么用？</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dataiter = iter(trainloader)</span><br><span class="line">images, labels = dataiter.next()</span><br></pre></td></tr></table></figure>
+<p>这两句就是出4个图？注:每张图片的大小是3 <em> 32 </em> 32</p>
+<ol start="2">
+<li>Define a Convolutional Neural Network<br>这里在定义网络的过程中有一个问题：</li>
+</ol>
+<p>torch.nn.MaxPool2d()和torch.nn.functional.MaxPool2d()有什么区别呢？为什么这里的写法和之前的不一样</p>
+<ol start="3">
+<li><p>Define a Loss function and optimizer</p>
+</li>
+<li><p>train a network</p>
+</li>
+</ol>
+<p>这里有一句</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> <span class="selector-tag">i</span>, data <span class="keyword">in</span> enumerate(trainlodader, <span class="number">0</span>)：</span><br><span class="line">    ...</span><br></pre></td></tr></table></figure>
+<p>这里括号里的0是什么意思</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> epoch <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>):</span><br><span class="line">    running_loss = <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">for</span> i, data <span class="keyword">in</span> enumerate(trainloader, <span class="number">0</span>):</span><br><span class="line">        inputs, <span class="built_in">labels</span> = data</span><br><span class="line">        </span><br><span class="line">        optimizer.zero_grad()</span><br><span class="line">        </span><br><span class="line">        outputs = net(inputs)</span><br><span class="line">        loss = criterion(outputs, <span class="built_in">labels</span>)</span><br><span class="line">        loss.backward()</span><br><span class="line">        optimizer.<span class="keyword">step</span>()</span><br><span class="line">        </span><br><span class="line">        running_loss += loss.item()</span><br><span class="line">        <span class="keyword">if</span> i <span class="symbol">%</span> <span class="number">500</span> == <span class="number">499</span>:</span><br><span class="line">            <span class="built_in">print</span>('[%d, %5d] loss: %3f' <span class="symbol">%</span> (epoch+<span class="number">1</span>, i+<span class="number">1</span>, running_loss/<span class="number">2000</span>))</span><br><span class="line">            running_loss = <span class="number">0.0</span></span><br></pre></td></tr></table></figure>
+<p><strong>！！！原文中的优化过程是这样的：epoch有两次，说明是在总的training data的5w的数据上整体优化两次</strong></p>
+<p><strong>每一次中，通过for i, data in enumerate(trainloader, 0):从trainloder中提取一个batch size的数据（也就是4个）</strong></p>
+<blockquote>
+<p>由于总共的数据有5w个，一个batch-size是4个的话，就一共有12500个mini-batch</p>
+</blockquote>
+<p><strong>然后对这一个batch的4个数据做一次动量SGD更新参数，后面的输出指的是，每2000个mini-batch输出一个平均loss（也就是每8000个数据）</strong></p>
+<h3 id="OPTIONAL-DATA-PARALLELISM"><a href="#OPTIONAL-DATA-PARALLELISM" class="headerlink" title="OPTIONAL: DATA PARALLELISM"></a>OPTIONAL: DATA PARALLELISM</h3><p>一句比较通用的代码</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">device = torch.device(<span class="string">"cuda:0"</span> <span class="keyword">if</span> torch<span class="selector-class">.cuda</span><span class="selector-class">.is_available</span>() <span class="keyword">else</span> <span class="string">"cpu"</span>)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -430,6 +492,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/pytorch/" rel="tag"># pytorch</a>
+          
+        </div>
       
 
       
@@ -449,10 +517,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/21/test/" rel="prev" title="test">
-                test <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -518,8 +582,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image" src="/images/yezang.gif" alt="ZhangTW">
+            
               <p class="site-author-name" itemprop="name">ZhangTW</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">breath、music、keep hydrated and love</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -529,14 +595,32 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -544,8 +628,30 @@
           
 
           
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ZtwZx" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:gsbyztw@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
 
           
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
+              </a>
+            </div>
           
 
           
@@ -566,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-ellisdg-3DUnetCNN"><span class="nav-number">1.</span> <span class="nav-text">1. ellisdg/3DUnetCNN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网址：https-github-com-ellisdg-3DUnetCNN"><span class="nav-number">2.</span> <span class="nav-text">网址：https://github.com/ellisdg/3DUnetCNN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#路径：E-学习用-学习书籍-深度学习框架pytorch入门与实践-3DUnetCNN"><span class="nav-number">3.</span> <span class="nav-text">路径：E:\学习用\学习书籍 深度学习框架pytorch入门与实践\3DUnetCNN</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#本实现是3Dunet的最高star实现，但是是kares的版本，主要研究数据格式问题"><span class="nav-number">3.1.</span> <span class="nav-text">本实现是3Dunet的最高star实现，但是是kares的版本，主要研究数据格式问题</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-chyacinth-pytorch-3DCNN-Lung"><span class="nav-number">4.</span> <span class="nav-text">2 chyacinth/pytorch_3DCNN_Lung</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网址https-github-com-chyacinth-pytorch-3DCNN-Lung-blob-master-data-py"><span class="nav-number">5.</span> <span class="nav-text">网址https://github.com/chyacinth/pytorch_3DCNN_Lung/blob/master/data.py</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#本代码是用来处理luna16数据集的，使之变为3d输出-数据下载：https-wiki-cancerimagingarchive-net-display-Public-LIDC-IDRI"><span class="nav-number">5.1.</span> <span class="nav-text">本代码是用来处理luna16数据集的，使之变为3d输出 数据下载：https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#autograd"><span class="nav-number">1.</span> <span class="nav-text">autograd</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#neural-network"><span class="nav-number">2.</span> <span class="nav-text">neural network</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#training-a-classifier"><span class="nav-number">3.</span> <span class="nav-text">training a classifier</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关于数据"><span class="nav-number">3.1.</span> <span class="nav-text">关于数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具体过程"><span class="nav-number">3.2.</span> <span class="nav-text">具体过程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OPTIONAL-DATA-PARALLELISM"><span class="nav-number">4.</span> <span class="nav-text">OPTIONAL: DATA PARALLELISM</span></a></li></ol></div>
             
 
           </div>
@@ -805,5 +911,5 @@
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false}});</script></body>
 </html>
