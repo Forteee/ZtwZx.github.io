@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<script>
+    (function(){
+        if('123456'){
+            if (prompt('请输入文章密码') !== '123456'){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="project,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="指令：12# shellpython train.py 训练情况简述本次一共运行200个epoch, batch_size=1, 训练集共126个个体， 一个epoch的平均训练时间60s，共计用时大概3小时20分钟 参数列表及说明：(第一次运行大部分采用default参数)1234567--dataroot =&apos;./datasets/CT&amp;amp;MR&apos;--name = experiment_n">
+<meta name="keywords" content="project">
+<meta property="og:type" content="article">
+<meta property="og:title" content="running_blog1">
+<meta property="og:url" content="http://yoursite.com/2019/03/27/running-blog1/index.html">
+<meta property="og:site_name" content="叶藏">
+<meta property="og:description" content="指令：12# shellpython train.py 训练情况简述本次一共运行200个epoch, batch_size=1, 训练集共126个个体， 一个epoch的平均训练时间60s，共计用时大概3小时20分钟 参数列表及说明：(第一次运行大部分采用default参数)1234567--dataroot =&apos;./datasets/CT&amp;amp;MR&apos;--name = experiment_n">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/26/ANdNRg.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/26/ANdUzQ.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/26/ANddMj.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/26/AU5BtO.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/26/AU5y1H.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/26/AU56cd.png">
+<meta property="og:updated_time" content="2019-03-27T13:16:18.737Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="running_blog1">
+<meta name="twitter:description" content="指令：12# shellpython train.py 训练情况简述本次一共运行200个epoch, batch_size=1, 训练集共126个个体， 一个epoch的平均训练时间60s，共计用时大概3小时20分钟 参数列表及说明：(第一次运行大部分采用default参数)1234567--dataroot =&apos;./datasets/CT&amp;amp;MR&apos;--name = experiment_n">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/03/26/ANdNRg.md.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/27/running-blog1/">
+
+
+
+
+
+
+  <title>running_blog1 | 叶藏</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">叶藏</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">水，音乐，呼吸；</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-love">
+          <a href="/love" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br>
+            
+            love
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/27/running-blog1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZhangTW">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/yezang.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="叶藏">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">running_blog1</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-27T21:14:30+08:00">
+                2019-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/项目记录/" itemprop="url" rel="index">
+                    <span itemprop="name">项目记录</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="指令："><a href="#指令：" class="headerlink" title="指令："></a>指令：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># shell</span></span><br><span class="line">python train.py</span><br></pre></td></tr></table></figure>
+<h4 id="训练情况简述"><a href="#训练情况简述" class="headerlink" title="训练情况简述"></a>训练情况简述</h4><p>本次一共运行200个epoch, batch_size=1, 训练集共126个个体， 一个epoch的平均训练时间60s，共计用时大概3小时20分钟</p>
+<h4 id="参数列表及说明：-第一次运行大部分采用default参数"><a href="#参数列表及说明：-第一次运行大部分采用default参数" class="headerlink" title="参数列表及说明：(第一次运行大部分采用default参数)"></a>参数列表及说明：(第一次运行大部分采用default参数)</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">--dataroot =<span class="string">'./datasets/CT&amp;MR'</span></span><br><span class="line">--name = experiment_name</span><br><span class="line">--checkpoints_dir = ./checkpoints</span><br><span class="line">--gpu_ids =<span class="string">'0,1,2,3'</span></span><br><span class="line"><span class="comment"># dataset parameters</span></span><br><span class="line">--batch_size = <span class="number">1</span></span><br><span class="line">--crop_size = <span class="number">64</span></span><br></pre></td></tr></table></figure>
+<h4 id="数据集概览"><a href="#数据集概览" class="headerlink" title="数据集概览"></a>数据集概览</h4><ul>
+<li>选取病人个数一共184人，其中126人用于训练，58人用于测试</li>
+<li>CT数据详细记录如下：<ul>
+<li>扫描张数 &gt; 32的—–11人<ul>
+<li>病人ID:0000244206, CT扫描张数:34 </li>
+<li>病人ID:0016436850, CT扫描张数:34</li>
+<li>病人ID:0017017862, CT扫描张数:34</li>
+<li>病人ID:0017684521, CT扫描张数:34</li>
+<li>病人ID:0018368205, CT扫描张数:34</li>
+<li>病人ID:0018381941, CT扫描张数:46</li>
+<li>病人ID:0018385835, CT扫描张数:34</li>
+<li>病人ID:0018714430, CT扫描张数:34</li>
+<li>病人ID:0019046621, CT扫描张数:34</li>
+<li>病人ID:0019280682, CT扫描张数:34</li>
+<li>病人ID:0019405664, CT扫描张数:34</li>
+</ul>
+</li>
+<li>扫描张数 = 27的—–170人</li>
+<li>扫描张数 != 27且&lt;32的—–3人<ul>
+<li>病人ID:0016346194, CT扫描张数:29</li>
+<li>病人ID:0016444781, CT扫描张数:26</li>
+<li>病人ID:0020297186, CT扫描张数:26</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>MR数据详细记录如下：<ul>
+<li>扫描张数 = 18的—–175人</li>
+<li>扫描张数 != 18的(均&lt;32)—–9人<ul>
+<li>病人ID:0016436850, MR扫描张数:20</li>
+<li>病人ID:0016526108, MR扫描张数:23</li>
+<li>病人ID:0016747621, MR扫描张数:20</li>
+<li>病人ID:0018714430, MR扫描张数:23</li>
+<li>病人ID:0018939457, MR扫描张数:20</li>
+<li>病人ID:0018940211, MR扫描张数:20</li>
+<li>病人ID:0019805606, MR扫描张数:20</li>
+<li>病人ID:0020161895, MR扫描张数:21</li>
+<li>病人ID:0020449938, MR扫描张数:20</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="关键改动补充"><a href="#关键改动补充" class="headerlink" title="关键改动补充"></a>关键改动补充</h4><p>CTandMR_dataset.py</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, index)</span>:</span></span><br><span class="line">    ct_path = self.CT_paths[index % self.CT_size] </span><br><span class="line">    mr_path = self.MR_paths[index % self.MR_size]</span><br><span class="line">    len_ct = len(os.listdir(ct_path))</span><br><span class="line">    len_mr = len(os.listdir(mr_path))</span><br><span class="line">    </span><br><span class="line">    data_CT = np.zeros((<span class="number">1</span>, self.opt.crop_size, self.opt.crop_size, self.opt.crop_depth))</span><br><span class="line">    data_MR = np.zeros((<span class="number">1</span>, self.opt.crop_size, self.opt.crop_size, self.opt.crop_depth))</span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(len_ct):</span><br><span class="line">        ct_image = Image.open(ct_path + <span class="string">'/&#123;&#125;.jpg'</span>.format(n))</span><br><span class="line">        ct_resized = ct_image.resize((self.opt.crop_size, self.opt.crop_size))</span><br><span class="line">        ct_curr = np.asarray(ct_resized)</span><br><span class="line">        <span class="keyword">if</span> n &lt; self.opt.crop_depth:</span><br><span class="line">            data_CT[<span class="number">0</span>, :, :, n] = ct_curr</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> range(len_mr):</span><br><span class="line">        mr_image = Image.open(mr_path + <span class="string">'/&#123;&#125;.jpg'</span>.format(n))</span><br><span class="line">        mr_resized = mr_image.resize((self.opt.crop_size, self.opt.crop_size))</span><br><span class="line">        mr_curr = np.asarray(mr_resized) </span><br><span class="line">        <span class="keyword">if</span> n &lt; self.opt.crop_depth:</span><br><span class="line">            data_MR[<span class="number">0</span>, :, :, n] = mr_curr</span><br></pre></td></tr></table></figure>
+<h4 id="部分代码逻辑"><a href="#部分代码逻辑" class="headerlink" title="部分代码逻辑"></a>部分代码逻辑</h4><p>主训练过程(train.py)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># train.py</span></span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">from</span> options.train_options <span class="keyword">import</span> TrainOptions</span><br><span class="line"><span class="keyword">from</span> data <span class="keyword">import</span> create_dataset</span><br><span class="line"><span class="keyword">from</span> models <span class="keyword">import</span> create_model</span><br><span class="line"><span class="keyword">from</span> util.visualizer <span class="keyword">import</span> Visualizer</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    opt = TrainOptions().parse()   </span><br><span class="line">    dataset = create_dataset(opt)   </span><br><span class="line">    </span><br><span class="line">    model = create_model(opt)      </span><br><span class="line">    model.setup(opt)               <span class="comment"># 三个作用：create schedulers、test阶段或者train阶段要继续训练是load networks、打印网路(可激活verbose参数详细输出)</span></span><br><span class="line">    </span><br><span class="line">    visualizer = Visualizer(opt)   <span class="comment"># create a visualizer that display/save images and plots</span></span><br><span class="line">    </span><br><span class="line">    total_iters = <span class="number">0</span>                <span class="comment"># the total number of training iterations, 一个iteration代表训练一个batch的数据</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> epoch <span class="keyword">in</span> range(opt.epoch_count, opt.niter + opt.niter_decay + <span class="number">1</span>):    <span class="comment"># outer loop for different epochs; we save the model by &lt;epoch_count&gt;, &lt;epoch_count&gt;+&lt;save_latest_freq&gt;</span></span><br><span class="line">        epoch_start_time = time.time()  <span class="comment"># timer for entire epoch</span></span><br><span class="line">        iter_data_time = time.time()    <span class="comment"># timer for data loading per iteration</span></span><br><span class="line">        epoch_iter = <span class="number">0</span>                  <span class="comment"># the number of training iterations in current epoch, reset to 0 every epoch</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i, data <span class="keyword">in</span> enumerate(dataset):  <span class="comment"># inner loop within one epoch</span></span><br><span class="line">            iter_start_time = time.time()  <span class="comment"># timer for computation per iteration</span></span><br><span class="line">            <span class="keyword">if</span> total_iters % opt.print_freq == <span class="number">0</span>:</span><br><span class="line">                t_data = iter_start_time - iter_data_time</span><br><span class="line">            visualizer.reset()</span><br><span class="line">            total_iters += opt.batch_size</span><br><span class="line">            epoch_iter += opt.batch_size</span><br><span class="line">            model.set_input(data)         </span><br><span class="line">            model.optimize_parameters()   </span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> total_iters % opt.print_freq  <span class="comment"># 每20代计算一次loss，并使用visualizer.print_current_losses()函数在控制台显示当前loss</span></span><br><span class="line">                                             <span class="comment"># 显示示例：(epoch: 200, iters: 100, time: 9.982, data: 0.478) G_GAN: 0.972 G_L1: 424.475 D_real: 0.000 D_fake: 0.000</span></span><br><span class="line">                                             <span class="comment"># epoch表示当前epoch数，iters表示现在是当前epoch第几个iter，t_comp表示这一个iter运行花费的总时间，t_data表示这一个iter加载数据花费的时间 </span></span><br><span class="line">                losses = model.get_current_losses()</span><br><span class="line">                <span class="comment">#print('losses:', losses) # 如果取消注释，仅仅输出losses的实例如下：</span></span><br><span class="line">                                          <span class="comment"># losses: OrderedDict([('G_GAN', 0.9720591306686401), ('G_L1', 424.47528076171875), ('D_real', 0.00036001871922053397), ('D_fake', 0.0003572868590708822)])</span></span><br><span class="line"></span><br><span class="line">                t_comp = (time.time() - iter_start_time) / opt.batch_size</span><br><span class="line">                visualizer.print_current_losses(epoch, epoch_iter, losses, t_comp, t_data)</span><br><span class="line">                <span class="keyword">if</span> opt.display_id &gt; <span class="number">0</span>:</span><br><span class="line">                    visualizer.plot_current_losses(epoch, float(epoch_iter) / dataset_size, losses)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> total_iters % opt.save_latest_freq == <span class="number">0</span>:   <span class="comment"># 每5000个iter 保存一次latest_net_G,latest_net_D模型</span></span><br><span class="line">                print(<span class="string">'saving the latest model (epoch %d, total_iters %d)'</span> % (epoch, total_iters))</span><br><span class="line">                save_suffix = <span class="string">'iter_%d'</span> % total_iters <span class="keyword">if</span> opt.save_by_iter <span class="keyword">else</span> <span class="string">'latest'</span></span><br><span class="line">                model.save_networks(save_suffix)</span><br><span class="line"></span><br><span class="line">            iter_data_time = time.time()</span><br><span class="line">        <span class="keyword">if</span> epoch % opt.save_epoch_freq == <span class="number">0</span>:              <span class="comment"># 每20个epoch 保存latest_模型 和 epoch_模型(epoch表示当前代数)</span></span><br><span class="line">            print(<span class="string">'saving the model at the end of epoch %d, iters %d'</span> % (epoch, total_iters))</span><br><span class="line">            model.save_networks(<span class="string">'latest'</span>)</span><br><span class="line">            model.save_networks(epoch)</span><br><span class="line"></span><br><span class="line">        print(<span class="string">'End of epoch %d / %d \t Time Taken: %d sec'</span> % (epoch, opt.niter + opt.niter_decay, time.time() - epoch_start_time))</span><br><span class="line">        model.update_learning_rate()        <span class="comment"># 更新learning_rate 并输出更新后的learning_rate</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="结果记录-test-ipynb"><a href="#结果记录-test-ipynb" class="headerlink" title="结果记录(test.ipynb)"></a>结果记录(test.ipynb)</h4><p><strong>定义opt参数</strong></p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line">from <span class="keyword">options</span>.train_options import TrainOptions</span><br><span class="line">from data import create_dataset</span><br><span class="line">from models import create_model</span><br><span class="line">import argparse</span><br><span class="line">import os</span><br><span class="line">import torch</span><br><span class="line"></span><br><span class="line">parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)</span><br><span class="line"></span><br><span class="line">parser.add_argument(<span class="string">'--dataroot'</span>, default=<span class="string">'./datasets/CT&amp;MR'</span>, <span class="keyword">help</span>=<span class="string">'path to images (should have subfolders trainA, trainB, valA, valB, etc)'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--name'</span>, <span class="built_in">type</span>=str, default=<span class="string">'experiment_name'</span>, <span class="keyword">help</span>=<span class="string">'name of the experiment. It decides where to store samples and models'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--gpu_ids'</span>, <span class="built_in">type</span>=str, default=<span class="string">'0,1,2,3'</span>, <span class="keyword">help</span>=<span class="string">'gpu ids: e.g. 0  0,1,2, 0,2. use -1 for CPU'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--checkpoints_dir'</span>, <span class="built_in">type</span>=str, default=<span class="string">'./checkpoints'</span>, <span class="keyword">help</span>=<span class="string">'models are saved here'</span>)</span><br><span class="line"></span><br><span class="line"># model parameters</span><br><span class="line">parser.add_argument(<span class="string">'--model'</span>, <span class="built_in">type</span>=str, default=<span class="string">'unet3d'</span>, <span class="keyword">help</span>=<span class="string">'chooses which model to use.'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--input_nc'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=<span class="number">1</span>, <span class="keyword">help</span>=<span class="string">'# of input image channels: 3 for RGB and 1 for grayscale'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--output_nc'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=<span class="number">1</span>, <span class="keyword">help</span>=<span class="string">'# of output image channels: 3 for RGB and 1 for grayscale'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--ngf'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=<span class="number">64</span>, <span class="keyword">help</span>=<span class="string">'# of gen filters in the last conv layer'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--ndf'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=<span class="number">64</span>, <span class="keyword">help</span>=<span class="string">'# of discrim filters in the first conv layer'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--netD'</span>, <span class="built_in">type</span>=str, default=<span class="string">'unet3d'</span>, <span class="keyword">help</span>=<span class="string">'specify discriminator architecture [basic | n_layers | pixel]. The basic model is a 70x70 PatchGAN. n_layers allows you to specify the layers in the discriminator'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--netG'</span>, <span class="built_in">type</span>=str, default=<span class="string">'unet3d'</span>, <span class="keyword">help</span>=<span class="string">'specify generator architecture'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--n_layers_D'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=<span class="number">3</span>, <span class="keyword">help</span>=<span class="string">'only used if netD==n_layers'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--norm'</span>, <span class="built_in">type</span>=str, default=<span class="string">'instance'</span>, <span class="keyword">help</span>=<span class="string">'instance normalization or batch normalization [instance | batch | none]'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--init_type'</span>, <span class="built_in">type</span>=str, default=<span class="string">'normal'</span>, <span class="keyword">help</span>=<span class="string">'network initialization [normal | xavier | kaiming | orthogonal]'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--init_gain'</span>, <span class="built_in">type</span>=float, default=<span class="number">0.02</span>, <span class="keyword">help</span>=<span class="string">'scaling factor for normal, xavier and orthogonal.'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--no_dropout'</span>, action=<span class="string">'store_true'</span>, <span class="keyword">help</span>=<span class="string">'no dropout for the generator'</span>)</span><br><span class="line"></span><br><span class="line"># dataset parameters</span><br><span class="line">parser.add_argument(<span class="string">'--dataset_mode'</span>, <span class="built_in">type</span>=str, default=<span class="string">'CTandMR'</span>, <span class="keyword">help</span>=<span class="string">'chooses how datasets are loaded. [unaligned | aligned | single | colorization]'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--direction'</span>, <span class="built_in">type</span>=str, default=<span class="string">'CTtoMR'</span>, <span class="keyword">help</span>=<span class="string">'AtoB or BtoA'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--serial_batches'</span>, action=<span class="string">'store_true'</span>, <span class="keyword">help</span>=<span class="string">'if true, takes images in order to make batches, otherwise takes them randomly'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--num_threads'</span>, default=<span class="number">4</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, <span class="keyword">help</span>=<span class="string">'# threads for loading data'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--batch_size'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=<span class="number">1</span>, <span class="keyword">help</span>=<span class="string">'input batch size'</span>)</span><br><span class="line">#parser.add_argument(<span class="string">'--load_size'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=<span class="number">286</span>, <span class="keyword">help</span>=<span class="string">'scale images to this size'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--crop_size'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=<span class="number">64</span>, <span class="keyword">help</span>=<span class="string">'then crop to this size'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--max_dataset_size'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=float(<span class="string">"inf"</span>), <span class="keyword">help</span>=<span class="string">'Maximum number of samples allowed per dataset. If the dataset directory contains more than max_dataset_size, only a subset is loaded.'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--preprocess'</span>, <span class="built_in">type</span>=str, default=<span class="string">'resize_and_crop'</span>, <span class="keyword">help</span>=<span class="string">'scaling and cropping of images at load time [resize_and_crop | crop | scale_width | scale_width_and_crop | none]'</span>)</span><br><span class="line">#parser.add_argument(<span class="string">'--no_flip'</span>, action=<span class="string">'store_true'</span>, <span class="keyword">help</span>=<span class="string">'if specified, do not flip the images for data augmentation'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--display_winsize'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=<span class="number">256</span>, <span class="keyword">help</span>=<span class="string">'display window size for both visdom and HTML'</span>)</span><br><span class="line"></span><br><span class="line"># additional parameters</span><br><span class="line">parser.add_argument(<span class="string">'--epoch'</span>, <span class="built_in">type</span>=str, default=<span class="string">'latest'</span>, <span class="keyword">help</span>=<span class="string">'which epoch to load? set to latest to use latest cached model'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--load_iter'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=<span class="string">'0'</span>, <span class="keyword">help</span>=<span class="string">'which iteration to load? if load_iter &gt; 0, the code will load models by iter_[load_iter]; otherwise, the code will load models by [epoch]'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--verbose'</span>, action=<span class="string">'store_true'</span>, <span class="keyword">help</span>=<span class="string">'if specified, print more debugging information'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--suffix'</span>, default=<span class="string">''</span>, <span class="built_in">type</span>=str, <span class="keyword">help</span>=<span class="string">'customized suffix: opt.name = opt.name + suffix: e.g., &#123;model&#125;_&#123;netG&#125;_size&#123;load_size&#125;'</span>)</span><br><span class="line"></span><br><span class="line">parser.add_argument(<span class="string">'--ntest'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=float(<span class="string">"inf"</span>), <span class="keyword">help</span>=<span class="string">'# of test examples.'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--results_dir'</span>, <span class="built_in">type</span>=str, default=<span class="string">'./results/'</span>, <span class="keyword">help</span>=<span class="string">'saves results here.'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--aspect_ratio'</span>, <span class="built_in">type</span>=float, default=<span class="number">1.0</span>, <span class="keyword">help</span>=<span class="string">'aspect ratio of result images'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--phase'</span>, <span class="built_in">type</span>=str, default=<span class="string">'test'</span>, <span class="keyword">help</span>=<span class="string">'train, val, test, etc'</span>)</span><br><span class="line"># Dropout <span class="built_in">and</span> Batchnorm <span class="built_in">has</span> different behavioir during training <span class="built_in">and</span> test.</span><br><span class="line">parser.add_argument(<span class="string">'--eval'</span>, action=<span class="string">'store_true'</span>, <span class="keyword">help</span>=<span class="string">'use eval mode during test time.'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--num_test'</span>, <span class="built_in">type</span>=<span class="keyword">int</span>, default=<span class="number">50</span>, <span class="keyword">help</span>=<span class="string">'how many test images to run'</span>)</span><br><span class="line"># rewrite devalue <span class="built_in">values</span></span><br><span class="line">parser.set_defaults(model=<span class="string">'test'</span>)</span><br><span class="line"># To avoid cropping, the load_size should <span class="keyword">be</span> the same <span class="keyword">as</span> crop_size</span><br><span class="line">parser.set_defaults(load_size=parser.get_default(<span class="string">'crop_size'</span>))</span><br><span class="line"></span><br><span class="line">parser.add_argument(<span class="string">'--model_suffix'</span>, <span class="built_in">type</span>=str, default=<span class="string">''</span>, <span class="keyword">help</span>=<span class="string">'In checkpoints_dir, [epoch]_net_G[model_suffix].pth will be loaded as the generator.'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">opt</span> = parser.parse_args([])</span><br><span class="line"><span class="keyword">opt</span>.isTrain = False</span><br><span class="line">#print(<span class="keyword">opt</span>)</span><br><span class="line"></span><br><span class="line">str_ids = <span class="keyword">opt</span>.gpu_ids.<span class="keyword">split</span>(<span class="string">','</span>)</span><br><span class="line"><span class="keyword">opt</span>.gpu_ids = []</span><br><span class="line"><span class="keyword">for</span> str_id in str_id<span class="variable">s:</span></span><br><span class="line">    id = <span class="keyword">int</span>(str_id)</span><br><span class="line">    <span class="keyword">if</span> id &gt;= <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">opt</span>.gpu_ids.<span class="keyword">append</span>(id)</span><br></pre></td></tr></table></figure>
+<p>首先是设置opt基本参数，比较重要的参数如下：</p>
+<ul>
+<li>–name default=’experiment_name’</li>
+<li>–checkpoints_dir default=’./checkpoints’</li>
+</ul>
+<p>以上参数主要是在<code>visualizer = Visualizer(opt)</code>初始化中确定log和model保存的路径</p>
+<ul>
+<li>–model = test  使用test_model.py中定义的测试模型</li>
+<li>–phase = test</li>
+<li>–epoch = ‘lastest’ 加载最近的epoch保存的模型作为测试模型，</li>
+</ul>
+<p><strong>根据参数构建model和dataset</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">In: dataset = create_dataset(opt)  </span><br><span class="line">    model = create_model(opt)</span><br><span class="line">Out:</span><br><span class="line">    dataset [CTandMRDataset] was created</span><br><span class="line">    Generator created</span><br><span class="line">    initialize network <span class="keyword">with</span> normal</span><br><span class="line">    model [TestModel] was created</span><br><span class="line"></span><br><span class="line">In: model.setup(opt)</span><br><span class="line">Out:</span><br><span class="line">    load_suffix_now: latest</span><br><span class="line">    loading the model <span class="keyword">from</span> ./checkpoints/experiment_name/latest_net_G.pth</span><br><span class="line">    ---------- Networks initialized -------------</span><br><span class="line">    [Network G] Total number of parameters : <span class="number">19.074</span> M</span><br><span class="line">    -----------------------------------------------</span><br></pre></td></tr></table></figure>
+<p><strong>获取当前测试数据</strong></p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">In</span>: test_data = <span class="keyword">next</span>(iter(dataset))</span><br><span class="line"><span class="keyword">In</span>: model.set_input(test_data)</span><br><span class="line"><span class="keyword">In</span>: model.image_paths</span><br><span class="line">Out:</span><br><span class="line">    [<span class="string">'./datasets/CT&amp;MR/testCT/0019321037'</span>]</span><br><span class="line"><span class="keyword">In</span>: <span class="keyword">with</span> torch.no_grad():</span><br><span class="line">    model.forward()  <span class="meta"># generate model.fake_B size:1*1*64*64*64</span></span><br></pre></td></tr></table></figure>
+<p><strong>先将model.real_A(这是经过crop后的图像)分网格可视化</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">In: f, plots = plt.subplots(<span class="number">8</span>, <span class="number">8</span>, figsize=(<span class="number">25</span>, <span class="number">25</span>))</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">i</span> in range(<span class="number">64</span>):</span><br><span class="line">        curr_B = model.real_A[<span class="number">0</span>, <span class="number">0</span>, :, :, <span class="built_in">i</span>].cpu().numpy()</span><br><span class="line">        plots[int(<span class="built_in">i</span> / <span class="number">8</span>), int(<span class="built_in">i</span> <span class="comment">% 8)].axis('off')</span></span><br><span class="line">        plots[int(<span class="built_in">i</span> / <span class="number">8</span>), int(<span class="built_in">i</span> <span class="comment">% 8)].imshow(curr_B, cmap=plt.cm.gray)</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://imgchr.com/i/ANdNRg" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/26/ANdNRg.md.png" alt="ANdNRg.md.png"></a></p>
+<p><strong>再将model.real_B可视化</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">In: f, plots = plt.subplots(<span class="number">8</span>, <span class="number">8</span>, figsize=(<span class="number">25</span>, <span class="number">25</span>))</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">i</span> in range(<span class="number">64</span>):</span><br><span class="line">        curr_B = model.real_B[<span class="number">0</span>, <span class="number">0</span>, :, :, <span class="built_in">i</span>].cpu().numpy()</span><br><span class="line">        plots[int(<span class="built_in">i</span> / <span class="number">8</span>), int(<span class="built_in">i</span> <span class="comment">% 8)].axis('off')</span></span><br><span class="line">        plots[int(<span class="built_in">i</span> / <span class="number">8</span>), int(<span class="built_in">i</span> <span class="comment">% 8)].imshow(curr_B, cmap=plt.cm.gray)</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://imgchr.com/i/ANdUzQ" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/26/ANdUzQ.png" alt="ANdUzQ.png"></a></p>
+<p><strong>最后将model.fake_B可视化</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">In: f, plots = plt.subplots(<span class="number">8</span>, <span class="number">8</span>, figsize=(<span class="number">25</span>, <span class="number">25</span>))</span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">i</span> in range(<span class="number">64</span>):</span><br><span class="line">        curr_B = model.fake_B[<span class="number">0</span>, <span class="number">0</span>, :, :, <span class="built_in">i</span>].cpu().numpy()</span><br><span class="line">        plots[int(<span class="built_in">i</span> / <span class="number">8</span>), int(<span class="built_in">i</span> <span class="comment">% 8)].axis('off')</span></span><br><span class="line">        plots[int(<span class="built_in">i</span> / <span class="number">8</span>), int(<span class="built_in">i</span> <span class="comment">% 8)].imshow(curr_B, cmap=plt.cm.gray)</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://imgchr.com/i/ANddMj" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/26/ANddMj.md.png" alt="ANddMj.md.png"></a><br>随机选择几个测试用例查看model collapse情况：</p>
+<ul>
+<li>0019771245<br><img src="https://s2.ax1x.com/2019/03/26/AU5BtO.png" alt="AU5BtO.png"></li>
+<li>0019986600<br><img src="https://s2.ax1x.com/2019/03/26/AU5y1H.png" alt="AU5y1H.png"></li>
+<li>0020097809<br><img src="https://s2.ax1x.com/2019/03/26/AU56cd.png" alt="AU56cd.png"></li>
+</ul>
+<h4 id="问题及解决"><a href="#问题及解决" class="headerlink" title="问题及解决"></a>问题及解决</h4><ul>
+<li>第一次运行中由于<code>save_epoch_freq=5</code>导致存储的中间结果太多硬盘空间不足，清理硬盘后重新输入<code>python train.py --continue_train</code>后继续训练，其代码逻辑在主函数中执行<code>model.setup(opt)</code>调用base_model.py中setup方法，该方法的作用是<em>Load and print networks; create schedulers</em></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">setup</span><span class="params">(self, opt)</span>:</span></span><br><span class="line">    <span class="string">"""Load and print networks; create schedulers</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">        opt (Option class) -- stores all the experiment flags; needs to be a subclass of BaseOptions</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="keyword">if</span> self.isTrain:</span><br><span class="line">        self.schedulers = [networks.get_scheduler(optimizer, opt) <span class="keyword">for</span> optimizer <span class="keyword">in</span> self.optimizers]</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> self.isTrain <span class="keyword">or</span> opt.continue_train:</span><br><span class="line">        load_suffix = <span class="string">'iter_%d'</span> % opt.load_iter <span class="keyword">if</span> opt.load_iter &gt; <span class="number">0</span> <span class="keyword">else</span> opt.epoch</span><br><span class="line">        print(<span class="string">'load_suffix_now:'</span>, load_suffix)</span><br><span class="line">        self.load_networks(load_suffix)</span><br><span class="line">    self.print_networks(opt.verbose)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>报错<code>RuntimeError: Input type (torch.cuda.FloatTensor) and weight type (torch.DoubleTensor) should be the same</code><br><br><br>该问题是由于输入input的type是<code>torch.cuda.float64</code>，而模型的参数的type是<code>torch.cuda.float32</code>，解决方案：<code>input = input.float()</code>将其转化为float32即可</li>
+</ul>
+<h4 id="改进及措施"><a href="#改进及措施" class="headerlink" title="改进及措施"></a>改进及措施</h4><ul>
+<li>能否用transform模块对图像做进一步处理(如mormalize)</li>
+<li>能否将输入的size设置为 256 <em> 256 </em> 32 进一步扩大宽度 减少深度</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/project/" rel="tag"># project</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/27/running-blog2/" rel="prev" title="running_blog2">
+                running_blog2 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/yezang.gif" alt="ZhangTW">
+            
+              <p class="site-author-name" itemprop="name">ZhangTW</p>
+              <p class="site-description motion-element" itemprop="description">breath、music、keep hydrated and love</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ZtwZx" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:gsbyztw@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#指令："><span class="nav-number">1.</span> <span class="nav-text">指令：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#训练情况简述"><span class="nav-number">2.</span> <span class="nav-text">训练情况简述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参数列表及说明：-第一次运行大部分采用default参数"><span class="nav-number">3.</span> <span class="nav-text">参数列表及说明：(第一次运行大部分采用default参数)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据集概览"><span class="nav-number">4.</span> <span class="nav-text">数据集概览</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关键改动补充"><span class="nav-number">5.</span> <span class="nav-text">关键改动补充</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部分代码逻辑"><span class="nav-number">6.</span> <span class="nav-text">部分代码逻辑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结果记录-test-ipynb"><span class="nav-number">7.</span> <span class="nav-text">结果记录(test.ipynb)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#问题及解决"><span class="nav-number">8.</span> <span class="nav-text">问题及解决</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改进及措施"><span class="nav-number">9.</span> <span class="nav-text">改进及措施</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZhangTW</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<!-- 新增访客统计代码 -->
+
+<div class="busuanzi-count">
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      访问用户： <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 人
+    </span>
+    <div class="powered-by"></div>
+    <span class="site-uv">
+      <i class="fa fa-eye"></i>
+      访问次数： <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次
+    </span>
+    <!-- 博客字数统计 -->
+    <span class="site-pv">
+      <i class="fa fa-pencil"></i>
+      博客全站共： <span class="post-count"></span> 字
+    </span>
+</div>
+<!-- 新增访客统计代码 END-->
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-right",
+    "margin": "10px 10px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UDD5CB353E",
+    "hash": "0cc7e12d6fa13fb44dd4732a8039cb01"
+});
+tpwidget("show");</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false}});</script></body>
+</html>
