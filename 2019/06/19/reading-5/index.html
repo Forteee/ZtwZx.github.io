@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="love,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="[TOC] Very Large Information System Challenge本文介绍了一个非常大的信息系统的概念和特性。 1.1 Background信息技术已经成为几乎任何行业不可或缺的工具。对于那些专门从事信息处理业务的行业尤为重要。 一些行业，如银行、航空公司或军队，都是信息技术的早期使用者，这些行业从上世纪50-60年代开始开始构建自己的系统。自20世纪50年代中期出现商用计">
+<meta name="keywords" content="love">
+<meta property="og:type" content="article">
+<meta property="og:title" content="reading_5">
+<meta property="og:url" content="http://yoursite.com/2019/06/19/reading-5/index.html">
+<meta property="og:site_name" content="叶藏">
+<meta property="og:description" content="[TOC] Very Large Information System Challenge本文介绍了一个非常大的信息系统的概念和特性。 1.1 Background信息技术已经成为几乎任何行业不可或缺的工具。对于那些专门从事信息处理业务的行业尤为重要。 一些行业，如银行、航空公司或军队，都是信息技术的早期使用者，这些行业从上世纪50-60年代开始开始构建自己的系统。自20世纪50年代中期出现商用计">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/19/VOOrut.md.png">
+<meta property="og:updated_time" content="2019-06-19T13:12:55.795Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="reading_5">
+<meta name="twitter:description" content="[TOC] Very Large Information System Challenge本文介绍了一个非常大的信息系统的概念和特性。 1.1 Background信息技术已经成为几乎任何行业不可或缺的工具。对于那些专门从事信息处理业务的行业尤为重要。 一些行业，如银行、航空公司或军队，都是信息技术的早期使用者，这些行业从上世纪50-60年代开始开始构建自己的系统。自20世纪50年代中期出现商用计">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/06/19/VOOrut.md.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/19/reading-5/">
+
+
+
+
+
+
+  <title>reading_5 | 叶藏</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">叶藏</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">水，音乐，呼吸；</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-love">
+          <a href="/love" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br>
+            
+            love
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/19/reading-5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZhangTW">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/yezang.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="叶藏">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">reading_5</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-19T21:08:08+08:00">
+                2019-06-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/杂谈/" itemprop="url" rel="index">
+                    <span itemprop="name">杂谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>[TOC]</p>
+<h1 id="Very-Large-Information-System-Challenge"><a href="#Very-Large-Information-System-Challenge" class="headerlink" title="Very Large Information System Challenge"></a>Very Large Information System Challenge</h1><p>本文介绍了一个非常大的信息系统的概念和特性。</p>
+<h2 id="1-1-Background"><a href="#1-1-Background" class="headerlink" title="1.1 Background"></a>1.1 Background</h2><p>信息技术已经成为几乎任何行业不可或缺的工具。对于那些专门从事信息处理业务的行业尤为重要。</p>
+<p>一些行业，如银行、航空公司或军队，都是信息技术的早期使用者，这些行业从上世纪50-60年代开始开始构建自己的系统。自20世纪50年代中期出现商用计算机后，越来越多的行业不断扩展信息系统的功能，并不断几层越来越多的数据。然而，增长会导致愈发复杂的系统。这些系统难以理解、难以维护、并且不好扩展。由于最初的设计人员已经不再可用，文档也不好，这样的系统称为<strong>遗留系统</strong>。在最开始的时候，这些通常是成功的设计，但是随着时间的推移，随着越来越多的功能被打包到系统中，往往最初的结构被证明不再可行。因此，许多早期采用信息技术的人都坐在难以维护和发展的复杂遗留系统上。</p>
+<p>在组织上，这导致IT功能和客户之间的紧张关系，因为客服很难理解为什么在遗留系统中满足新的业务需求是如此缓慢和昂贵。（。。。诸如此类有很多信息代差导致的互不理解的问题），导致了糟糕的沟通，最终导致不信任。现代组织试图通过建立一个制度化的沟通和决策框架来解决这个问题，这个框架被称为<strong>IT治理</strong></p>
+<h2 id="1-2-Complexity-of-Very-Large-Information-Systems"><a href="#1-2-Complexity-of-Very-Large-Information-Systems" class="headerlink" title="1.2 Complexity of Very Large Information Systems"></a>1.2 Complexity of Very Large Information Systems</h2><p>在过去的60年内，系统有的显著的增长，他们的复杂性已经从鼓励的计算机激增到全球系统。复杂性是一个复杂而有趣的概念，在很多学科有不同的定义，但在这里我们是用最简单常见的定义：</p>
+<blockquote>
+<p>复杂性就是指系统由许多不同但是相连的部分组成</p>
+</blockquote>
+<p>这里的两个重要概念是<strong>部件</strong>和<strong>连接</strong>。大型信息系统中的部件指的是提供业务功能的应用程序，以及后塍基础设施的数据和技术组件。部件之间的连接生成依赖关系，例如数据流或控制流。</p>
+<p>成功开发复杂系统的主要挑战是处理其连接：因为系统中一部分的更改可能通过连接传播到系统的其他部分。在一个非常大的信息系统中，这些连接导致各部分的依赖关系如下：</p>
+<ul>
+<li>功能依赖<br><br>一个部件功能上变化可能会给其他部件带来未知的、无法预见的、甚至可能是破坏性的后果。</li>
+<li>语义依赖<br><br>术语或数据元素必须在它们的所有用户之间显式的清晰和明确。如果数据元素的提供者更改或者扩展了语义，则必须让数据元素的所有用户知道这一点。</li>
+<li>时间依赖<br><br>系统某一部分的变更可能需要同时把系统的其他部分同时更新。</li>
+<li>技术依赖<br><br>非常大的信息系统的各个股份通过不同的技术连接在一起。</li>
+<li>操作依赖<br><br>在应用程序执行期间，每个应用程序或组件都依赖于其他应用程序、组件。</li>
+</ul>
+<p>系统中每个连接都会生成依赖关系，通常会同时生成多个依赖关系。如果没有正确的管理连接，连接的数量可能会失控，依赖关系的数量和每个连接生成的依赖关系的数量而增加。</p>
+<h2 id="1-3-Properties-of-Very-Large-Information-Systems"><a href="#1-3-Properties-of-Very-Large-Information-Systems" class="headerlink" title="1.3 Properties of Very Large Information Systems"></a>1.3 Properties of Very Large Information Systems</h2><p><strong>系统复杂性</strong>是由于大量依赖的部件造成的，是大型信息系统的第一个特性，然而一个非常大的信息系统不能仅以系统复杂性为特征。必须考虑到许多其他特性。</p>
+<p>大型信息系统的第二个特征是它们的<strong>功能大小</strong>。功能大小可以用多种方式表示，如源代码函数、the number of function points、the number of use case points</p>
+<p>大型信息系统进过多年的发展成为非常大的信息系统。因此，这样的系统包含大量的遗留代码。所以第三个特性是非常大的<strong>信息系统遗留部分的功能大小</strong>。遗留部件由于其高运营成本和低可靠性变得对系统来说是不可接受的。</p>
+<p>影响系统的第四个特征是当今<strong>大量的业务驱动的变更</strong>。业务取决于及时的实施和修改，如果不能这样，系统就会成为业务增长和业务战略实施的限制因素。</p>
+<p><strong>规模和年龄</strong>的一个结果是系统的价值，这是第五个特征：在多年的发展过程中，不断的进行投资，添加新的功能，并逐年增加系统的价值。</p>
+<p><strong>任务临界性</strong>是系统的第六个特质。任务临界性通常表示为业务可接受的不可用时间跨度。任务临界性的另一个指标是依赖于系统可用性的用户数量。</p>
+<p>第七个特性是<strong>基础设施的扩散</strong>。由于信息系统的规模和年龄，非常大的系统具有技术基础的异质性，这对灵活性是有害的。</p>
+<p>第八个特性是<strong>治理类型</strong>，由于非常大的信息系统比租住架构更长寿，并且因为这些系统又服务于大型组织，所以会产生分散的治理结构和分布式公司组织。</p>
+<p><strong>IT组织的结构</strong>是非常大信息系统的第九个特征。由于系统由大型组织拥有和经营，所以系统的不同部分通常在不同组织单位的责任下，几乎没有严格的集中控制。</p>
+<p>总之。我们将非常大的信息系统定义为：</p>
+<blockquote>
+<p>功能丰富、具有悠久的开发历史，包含需要更换或重新设计的重要遗留部件，具有高更换率，高重置成本。因此对于其所有者来说代表高价值。依赖于异构技术，让大量利益相关者实现联合治理，并且通常在分布式IT组织中。</p>
+</blockquote>
+<h2 id="1-4-Strategic-Approaches-for-Very-Large-Information-Systems"><a href="#1-4-Strategic-Approaches-for-Very-Large-Information-Systems" class="headerlink" title="1.4 Strategic Approaches for Very Large Information Systems"></a>1.4 Strategic Approaches for Very Large Information Systems</h2><h3 id="1-4-1-Opportunistic-Approach"><a href="#1-4-1-Opportunistic-Approach" class="headerlink" title="1.4.1 Opportunistic Approach"></a>1.4.1 Opportunistic Approach</h3><p>系统发展的机会主义方法的特征是<strong>纯粹的业务需求驱动的项目组合，很少或几乎不考虑灵活性问题</strong>。这种小规模的方法侧重于业务的功能需求，忽略了肺功能属性和总体功能。总之，机会主义方法是一种“自由放任”的战略，只需要所有利益攸关方的最少努力和治理。</p>
+<p>机会主义方法会驱使系统进入复杂性陷阱：随着越来越多的功能被添加而不考虑非常大信息系统的架构原则，系统复杂性不断增加。越来越多的部件和依赖关系以不协调的方式引入，结果就是系统的概念完整性和灵活性不断降低。系统的维护和运行成本逐步增加。会导致业务需求的实施缓慢且成本奇高，系统变得不稳定而且难以运营。</p>
+<h3 id="1-4-2-Replacement-Approach"><a href="#1-4-2-Replacement-Approach" class="headerlink" title="1.4.2 Replacement Approach"></a>1.4.2 Replacement Approach</h3><p>多年来，机会主义方法导致了一个灵活性低，业务价值停滞的系统。为了达到理想的状态，尝试更换整个系统的方案是十分诱人的：替换方法有望彻底摆脱旧有的有问题的系统，并获得一个新的，“完美的”系统。有几种可能的方法来替换系统：</p>
+<ul>
+<li>如果市场上有可以或得所需功能和性能的标准软件包。则可以通过此软件包替换系统。但是不幸的是这种软件包通常只能涵盖部分所需功能。在实践中，通常可以通过标准软件来替换系统中的一部分，如企业资源规划（ERP）。然而对于非常大信息系统，标准软件通常不能涵盖完整要求。因此通常不可行。</li>
+<li>如果没有可用的标准软件，则可以选择迁移到另一个组织的现有系统。非常强有力的治理是这种措施成功实施的关键要素。</li>
+<li>另一种成功的途欢方案是许多合作伙伴共同开发系统。对于具有有限复杂性的系统的外包商来说，这是成功的。但对于拥有更大更复杂系统并且同时需要区分其产品的组织不能(或者说只能部分的)走这条路。</li>
+</ul>
+<h3 id="1-4-3-Greenfield-Approach"><a href="#1-4-3-Greenfield-Approach" class="headerlink" title="1.4.3 Greenfield Approach"></a>1.4.3 Greenfield Approach</h3><p>总的来说，所谓绿地方法就是在绿色领域建立完整的替代品(绿色领域green field的明确概念木有找到)。比起<strong>替代方法中，现有业务流程必须适应可用解决方案的功能</strong>，在绿地方法中，开发从规范开始，这些规范是对现有系统能力的改进。</p>
+<p>然而作者的结论是：绿地方法非常难以实施，对于非常大的信息系统，它大大扰乱了组织的工作。原始简单概括一下：</p>
+<ul>
+<li>这样一个项目持续时间过长，至少需要3-5年时间，这期间系统对于新业务的需求就或多或少的停滞5年，知道绿地系统投入运行</li>
+<li>技术基础不能再如此长的开发时间内被冻结。</li>
+<li>组织要同时赞助两个系统，给项目带来巨大压力</li>
+<li>人事上也不是很容易调配</li>
+</ul>
+<h2 id="1-5-The-Core-Idea-of-Managed-Evolution"><a href="#1-5-The-Core-Idea-of-Managed-Evolution" class="headerlink" title="1.5 The Core Idea of Managed Evolution"></a>1.5 The Core Idea of Managed Evolution</h2><p>对于那些既不合并也不购买，也不会冒风险采用绿地方法(greenfield approach)并认为机会主义方法不起作用的人应该采用什么方法呢？显然，答案是基于<strong>进化方法</strong>。因为从上所述，完全替换是不可能的。进化意味着系统逐渐变化。整个系统没有寿命终结，只有零件正在更换。</p>
+<p>系统的发展可以受许多外部力量的驱动，特别是对于新功能和新技术的实施需求不断增加，这就导师了相当大的变更率(rate of change)所以同时需要不断提高系统的效率。下图显示了演变曲线。更高的灵敏性(agility)允许更低的成本和更短的时间创造更多的业务价值。<br><a href="https://imgchr.com/i/VOOrut" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/06/19/VOOrut.md.png" alt="VOOrut.md.png"></a><br>管理演化的核心思想是对组合修改的控制。使得在一定时间段内执行的修改保持在上图的演化channel中。</p>
+<h2 id="1-6-Elements-of-Managed-Evolution管理进化的要素"><a href="#1-6-Elements-of-Managed-Evolution管理进化的要素" class="headerlink" title="1.6 Elements of Managed Evolution管理进化的要素"></a>1.6 Elements of Managed Evolution管理进化的要素</h2><p>如上所述，进化管理(managed evolution)是以协调的方式为非常大的信息系统引导一系列的修改。因此进化管理的第一个要素是高效的项目管理流程。</p>
+<p>进化管理的另一个重要因素是整个系统的强大而持续的架构管理。架构管理生成并维护IT目标架构，包括蓝图、原则和IT标准。应用体系架构的一个重要的结果是域模型(domain model)，它将整个系统划分为域，分为技术域和应用程序域。在项目组合管理过程中。域模型用于组织项目，使得某个域的所有项目可以一起管理，从而避免多余的工作。</p>
+<p><strong>集成架构(integration architecture)</strong> 在进化管理方面发挥着关键作用。这种架构将应用程序划分为各种组件和一个管理不同组件之间接口的过程。</p>
+<p>进化管理的另一个关键要素是拥有非常大的信息系用的组织。组织必须发展一些特定的技能、文化价值和组织特性，这样才能成功管理大型信息系统的发展。</p>
+<p>进化管理的最后一个要素是测量和控制。必须测量和跟踪非常大的信息系统的演变结果。必须识别和纠正所需进化策略的偏差，还必须评估进化管理工具的有效性。</p>
+<h2 id="1-7-Where-to-Start-with-Managed-Evolution"><a href="#1-7-Where-to-Start-with-Managed-Evolution" class="headerlink" title="1.7 Where to Start with Managed Evolution"></a>1.7 Where to Start with Managed Evolution</h2><p>进化管理的概念是在发展、维护和维持非常大的信息系统的压力下发展起来的。因此，特定系统的进化管理应该在某个时间点开始(也就是系统开发很久之后)。一旦组织决定着手实施有管理的进化战略，有以下几个步骤可以采取：</p>
+<ul>
+<li>第一个挑战是使非常大的信息系统的范围正确。范围的定义表示系统边界的绘制。即定义属于所考虑的非常大的信息系统的内容以及超过范围的内容。<blockquote>
+<p>如果范围太小(也就是紧密连接的部件不属于同一范围)，则策略会无法工作，因为主要依赖关系会不受管理。如果范围太大，则会在系统的松散耦合的部分之间创建不必要的协调开销。</p>
+</blockquote>
+</li>
+<li>第二个挑战是要以实在的(pragmatic)方式模块化(modularizing)大型信息系统。组件和接口应该支持定义的业务价值或所需要技术改进。模块化有助于为大型信息系统指定战略计划并逐步实施计划。</li>
+<li>第三个挑战是使治理、战略、流程和组织适应适当的范围。需要在整体范围内建立强大的架构领导力(architecture leadership)。</li>
+<li>第四个挑战是文化。因为大型系统的进化是所有部分的总和。大型信息系统的设计是由无数开发人员采取的无数微观决策定义的。所以需要一种<strong>think big-act local</strong> 的文化。另一个文化是<strong>信任</strong>，项目经理和开发人员必须信任先决条件组件的提供者。最后一个文化方面是<strong>长期思考</strong>，在进化管理中需要长远的眼光和思考。</li>
+<li>最后，第五个挑战是初始资金。任何项目都需要money嘛。</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/love/" rel="tag"># love</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/19/reading-1/" rel="next" title="reading_1 The Evolution of the Organizational Architect">
+                <i class="fa fa-chevron-left"></i> reading_1 The Evolution of the Organizational Architect
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/19/reading-6/" rel="prev" title="reading_6">
+                reading_6 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/yezang.gif" alt="ZhangTW">
+            
+              <p class="site-author-name" itemprop="name">ZhangTW</p>
+              <p class="site-description motion-element" itemprop="description">breath、music、keep hydrated and love</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ZtwZx" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:gsbyztw@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Very-Large-Information-System-Challenge"><span class="nav-number">1.</span> <span class="nav-text">Very Large Information System Challenge</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-Background"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 Background</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Complexity-of-Very-Large-Information-Systems"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Complexity of Very Large Information Systems</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-Properties-of-Very-Large-Information-Systems"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 Properties of Very Large Information Systems</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-Strategic-Approaches-for-Very-Large-Information-Systems"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 Strategic Approaches for Very Large Information Systems</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-Opportunistic-Approach"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.4.1 Opportunistic Approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-Replacement-Approach"><span class="nav-number">1.4.2.</span> <span class="nav-text">1.4.2 Replacement Approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-3-Greenfield-Approach"><span class="nav-number">1.4.3.</span> <span class="nav-text">1.4.3 Greenfield Approach</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-The-Core-Idea-of-Managed-Evolution"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 The Core Idea of Managed Evolution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-Elements-of-Managed-Evolution管理进化的要素"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 Elements of Managed Evolution管理进化的要素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-Where-to-Start-with-Managed-Evolution"><span class="nav-number">1.7.</span> <span class="nav-text">1.7 Where to Start with Managed Evolution</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZhangTW</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<!-- 新增访客统计代码 -->
+
+<div class="busuanzi-count">
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      访问用户： <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 人
+    </span>
+    <div class="powered-by"></div>
+    <span class="site-uv">
+      <i class="fa fa-eye"></i>
+      访问次数： <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次
+    </span>
+    <!-- 博客字数统计 -->
+    <span class="site-pv">
+      <i class="fa fa-pencil"></i>
+      博客全站共： <span class="post-count"></span> 字
+    </span>
+</div>
+<!-- 新增访客统计代码 END-->
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-right",
+    "margin": "10px 10px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UDD5CB353E",
+    "hash": "0cc7e12d6fa13fb44dd4732a8039cb01"
+});
+tpwidget("show");</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false}});</script></body>
+</html>
