@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误');
+                history.back();
+            }
+        }
+    })();
+</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="love,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="[TOC] Characterizing the Software Process A Maturity Framework改进(提升)++软件开发组织(software development organizations)++ 的表现十分重要。而这个改进过程一般有5个基本元素：  1 了解开发过程的当前状态 2 对目标过程有明确的愿景(a vision of the desired proces">
+<meta name="keywords" content="love">
+<meta property="og:type" content="article">
+<meta property="og:title" content="reading_3 Characterizing the Software Process">
+<meta property="og:url" content="http://yoursite.com/2019/06/20/reading-3/index.html">
+<meta property="og:site_name" content="叶藏">
+<meta property="og:description" content="[TOC] Characterizing the Software Process A Maturity Framework改进(提升)++软件开发组织(software development organizations)++ 的表现十分重要。而这个改进过程一般有5个基本元素：  1 了解开发过程的当前状态 2 对目标过程有明确的愿景(a vision of the desired proces">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-20T12:56:01.116Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="reading_3 Characterizing the Software Process">
+<meta name="twitter:description" content="[TOC] Characterizing the Software Process A Maturity Framework改进(提升)++软件开发组织(software development organizations)++ 的表现十分重要。而这个改进过程一般有5个基本元素：  1 了解开发过程的当前状态 2 对目标过程有明确的愿景(a vision of the desired proces">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/06/20/reading-3/">
+
+
+
+
+
+
+  <title>reading_3 Characterizing the Software Process | 叶藏</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">叶藏</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">水，音乐，呼吸；</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-love">
+          <a href="/love" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heart"></i> <br>
+            
+            love
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/20/reading-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ZhangTW">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/yezang.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="叶藏">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">reading_3 Characterizing the Software Process</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-20T20:54:57+08:00">
+                2019-06-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/杂谈/" itemprop="url" rel="index">
+                    <span itemprop="name">杂谈</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>[TOC]</p>
+<h1 id="Characterizing-the-Software-Process-A-Maturity-Framework"><a href="#Characterizing-the-Software-Process-A-Maturity-Framework" class="headerlink" title="Characterizing the Software Process A Maturity Framework"></a>Characterizing the Software Process A Maturity Framework</h1><p>改进(提升)++软件开发组织(software development organizations)++ 的表现十分重要。而这个改进过程一般有5个基本元素：</p>
+<ul>
+<li>1 了解开发过程的当前状态</li>
+<li>2 对目标过程有明确的愿景(a vision of the desired process)</li>
+<li>3 需要改进的优先级列表</li>
+<li>4 完成这些行动的计划</li>
+<li>5 执行计划的资源和承诺</li>
+</ul>
+<p><br><strong>本文通过为软件组织改进提供一个模型来解决前三个元素。</strong> 该模型的结构提供了五个成熟度级别，确定了每个级别所需的关键改进，并为实现建立了优先级顺序。这个模型已经在许多组织中进行了测试，发现它能够合理地表示实际软件开发组的状态和需求。</p>
+<hr>
+<p>关键词：<strong>软件组织改进</strong>、<strong>改进模型</strong></p>
+<h2 id="1-Introduction"><a href="#1-Introduction" class="headerlink" title="1. Introduction"></a>1. Introduction</h2><p>如今软件成本以每年12%的速度增长，对软件具有更多功能的需求也日益增长。软件是目前美国国防部采购成本中一个重要且不断增加的部分，软件严重影响许多武器系统开发的进度和实用性。<br><br><br></p>
+<h2 id="本文描述了SEI项目的初试结果，该项目为美国国防部提供了一个描述软件开发组织能力的方法。-该项目提出的软件处理成熟度框架-the-software-process-maturity-framework-可以被国防部或者软件开发组织来评估他们自己的能力，并确定最重要的改进区域"><a href="#本文描述了SEI项目的初试结果，该项目为美国国防部提供了一个描述软件开发组织能力的方法。-该项目提出的软件处理成熟度框架-the-software-process-maturity-framework-可以被国防部或者软件开发组织来评估他们自己的能力，并确定最重要的改进区域" class="headerlink" title="本文描述了SEI项目的初试结果，该项目为美国国防部提供了一个描述软件开发组织能力的方法。 该项目提出的软件处理成熟度框架(the software process maturity framework) 可以被国防部或者软件开发组织来评估他们自己的能力，并确定最重要的改进区域"></a>本文描述了SEI项目的初试结果，该项目<strong>为美国国防部提供了一个描述软件开发组织能力的方法。</strong> 该项目提出的<strong>软件处理成熟度框架(the software process maturity framework)</strong> 可以被国防部或者软件开发组织来评估他们自己的能力，并确定最重要的改进区域</h2><p>关键词：SEI项目，用来帮助软件开发组织评估自己的软件开发能力，并定位软件开发过程最重要的改进区域。</p>
+<h2 id="2-Software-Development-Processes"><a href="#2-Software-Development-Processes" class="headerlink" title="2. Software Development Processes"></a>2. Software Development Processes</h2><p>处理软件问题的一个重要的初始步骤是<strong>将整个开发任务视为一个可以控制、度量和改进的过程。</strong> 为此我们将++过程(process)++ 定义为一系列++任务(tasks)++，当这些任务被正确执行的时候就能产生想要的结果。显然，一个完整有效的过程必须考虑所有必须任务、使用的工具和方法以及相关人员的技能、培训和动机之间的相互关系。</p>
+<blockquote>
+<p>“软件过程为一个为建造高质量软件所需完成的任务的框架，即形成软件产品的一系列步骤，包括中间产品、资源、角色及过程中采取的方法、工具等范畴。”—百度百科</p>
+</blockquote>
+<blockquote>
+<p>这一段话的内在逻辑在：首先要把软件问题视为一个过程，而过程又可以被一系列任务定义。所以考虑软件过程重点就是要考虑这一系列任务(除了任务本身也包括执行任务的工具、执行任务的人啊之类的)</p>
+</blockquote>
+<p>软件过程管理的基本原则是，<strong>如果开发过程处于统计控制之下，只有对过程进行改进才能产生始终如一比较好的结果</strong>。所谓++统计控制(statistical control)++ 指的是<strong>如果以大致相同的方式做同样的工作，就能得到大致相同的结果</strong>。</p>
+<p>为了提高软件的能力，软件开发组织需要采取以下5个步骤：</p>
+<ul>
+<li>了解开发过程的当前状态；</li>
+<li>对期望的过程构建一个愿景(develop a vision of the desired process)</li>
+<li>按照优先级确定一个过程改进行动列表</li>
+<li>指定一个计划来完成这些行动</li>
+<li>提交资源来执行计划</li>
+</ul>
+<p><strong>本文就是通过提出一种将软件过程(软件过程的描述上文有)描述为5个成熟度级别之一</strong> 来解决上述问题。选用这种成熟度结构(maturity structure)有以下几个原因：</p>
+<ul>
+<li>选择成熟度级别是为了合理地表示实际软件开发组织改进的具体阶段</li>
+<li>每个成熟度级别代表软件改进过程的一个级别，该级别可以从先前的级别合理的实现。</li>
+<li>每个成熟度级别都应该建议中期的改进目标和进度措施</li>
+<li>一旦知道了组织在这个框架中的地位，应该立刻有一个改进优先级</li>
+</ul>
+<p>这个<strong>成熟度结构</strong> 旨在和++评估方法++ 和 ++管理系统++一起使用。其中<strong>评估方法</strong>提供了一种方法来确定组织的特定成熟度状态，<strong>管理系统</strong>为实际实现改进组织所需的优先级操作建立了一个结构。</p>
+<h2 id="3-An-Ideal-Software-Process"><a href="#3-An-Ideal-Software-Process" class="headerlink" title="3. An Ideal Software Process"></a>3. An Ideal Software Process</h2><p>不重要</p>
+<h2 id="4-Process-Maturity-Levels"><a href="#4-Process-Maturity-Levels" class="headerlink" title="4. Process Maturity Levels"></a>4. Process Maturity Levels</h2><p>5个已经被被定义的成熟度级别为(<strong>下面会详细介绍</strong>)：</p>
+<ul>
+<li>Initial - 只有在++统计控制(statistical control)++ 的过程，才可能有有序的改进过程</li>
+<li>Repeatable - 通过对承诺、成本、进度和变更进行严格的项目管理，可以实现具有可重复统计控制级别的稳定过程。</li>
+<li>Defined - 有必要对过程进行定义，来确保一致的实现，并且为更好的理解过程提供基础。在这一点上，先进的技术才可能被有效的引进。</li>
+<li>Managed - 根据定义的过程，可以开始进行过程衡量(process measurement) 在一步开始出现最显著的质量改进。</li>
+<li>Optimized - 通过被测量的过程，为过程的持续优化和改进提供了基础。</li>
+</ul>
+<h3 id="4-1-The-Initial-Process"><a href="#4-1-The-Initial-Process" class="headerlink" title="4.1. The Initial Process"></a>4.1. The Initial Process</h3><p>初始过程通常是无序的。这里，组织通常没有正式的过程、成本估计和项目计划。工具也没有很好的和过程集成使用，对变更的控制也是松散的。由于问题常常被推迟，使之被遗忘，而不是被解决，所以软件安装和维护通常会出现问题。</p>
+<p>组织用这种混乱的方式行事的一个关键原因是，他们没有获得足够的经验来理解这种行为的后果。在初始过程中的组织可以通过建立基本的项目控制来推进可重复的过程。最重要的是一下几点：</p>
+<ul>
+<li>项目管理。项目管理系统的根本作用是确保对承诺的有效控制。除了最简单的项目外，任何项目都必须制定计划，以确定最佳时间表和所需的预期资源。</li>
+<li>监督管理。一个适当的有纪律的软件开发组织必须有公司的监督。这包括在正式承诺之前审查和批准所有主要发展计划。按项目对整个设施的季度评审。缺乏这种审查会导致进程执行不平衡和不充分。</li>
+<li>产品保证。产品保证小组负责向管理层保证软件开发工作实际上是按照预期的方式完成的。</li>
+<li>控制变更。控制软件开发中的变更对于业务和财务控制以及技术稳定都是至关重要的。为了按照可以测的进度开发高质量的软件，必须在整个开发周期中以合理的稳定性建立和维护需求。</li>
+</ul>
+<h3 id="4-2-The-Repeatable-Process"><a href="#4-2-The-Repeatable-Process" class="headerlink" title="4.2. The Repeatable Process"></a>4.2. The Repeatable Process</h3><p>可重复的过程相对于初始过程有一个重要的优势，它提供了一个合理的承诺控制度量。这对于初始过程中的performance来说是一个巨大的好处，以至于组织人员倾向于相信他们已经掌握了软件问题。他们没有意识到他们的力量来自于以前做类似工作的经验。因此，可重复过程中的组织在面临挑战时会遇到很多风险。一些改变的例子如下：</p>
+<ul>
+<li>每一个新技术都有风险和好处</li>
+<li>当可重复的过程组织必须开发一种新的产品时，它就进入了一个新的领域。会涉及的类似接口啊，集成问题之类的问题。</li>
+<li>重大的组织变更可能具有高度破坏性。</li>
+</ul>
+<p>从可重复的过程推进到已定义的活动所需要关键行动如下：</p>
+<ul>
+<li>建立一个过程组。这是一个专门致力于改进软件开发过程的技术团队。</li>
+<li>建立软件开发过程体系结构，描述正确执行开发过程所需的技术和管理活动。体系结构是任务的结构化分解。每一个任务都有入口标准、功能描述、验证过程和出口标准。</li>
+<li>如果这样还没有到位，就引入一系列软件工程方法和技术。包括设计和代码检查、形式化设计方法、库控制系统和综合测试方法。</li>
+</ul>
+<h3 id="4-3-The-Defined-Process"><a href="#4-3-The-Defined-Process" class="headerlink" title="4.3. The Defined Process"></a>4.3. The Defined Process</h3><p>通过已确定的过程，本组织已经取得了重大和持续进展的基础。尽管定义过程非常强大，但它只是定性的。也就是说，并没有数据表明正在发生什么，或者这个过程有多有效。关于软件度量的价值有很多争论。通过定义流程(defined process)，我们可以讲度量的重点放在特定的任务和项目上。</p>
+<p>从已定义的过程过渡到以管理的过程，主要步骤如下：</p>
+<ul>
+<li>建立一个最小的基本过程测量集，以确定每一个过程步骤的质量和成本参数。</li>
+<li>利用资源建立流程数据库来管理和维护流程数据库。</li>
+<li>提供足够的资源来分析这些数据，并就数据的意义和使用向项目成员提供建议。</li>
+<li>评估每一种产品的相对质量，并告知管理层没有达到质量目标。</li>
+</ul>
+<h3 id="4-4-The-Managed-Process"><a href="#4-4-The-Managed-Process" class="headerlink" title="4.4. The Managed Process"></a>4.4. The Managed Process</h3><p>从最初过程到托管过程的过渡中，软件组织通常会经历大量的质量改进。管理过程的最大潜在问题是收集数据的成本。有大量潜在有价值的软件开发数据，但是这些数据的收集和维护非常昂贵。</p>
+<p>从管理过程到优化过程的两个基本需求是：</p>
+<ul>
+<li>为数据收集过程提供自动支持。</li>
+<li>将管理的重点从产品转移到过程。</li>
+</ul>
+<h3 id="4-5-The-Optimized-Process"><a href="#4-5-The-Optimized-Process" class="headerlink" title="4.5. The Optimized Process"></a>4.5. The Optimized Process</h3><p>从管理过程到优化过程的过程包括范式转换(paradigm shift)， 到目前为止，软件开发经理主要关注他们的产品工作，并通常只收集和分析与产品改进相关的数据。通过<strong>优化过程</strong>，数据可以用来调整过程本身。</p>
+<p>有了优化过程，组织就有了方法来识别流程中最薄弱的元素并加以修正。人们不需要大量的纸张来描述发生了什么，因为简单的收益率曲线和统计图提供了清晰简洁的指标。</p>
+<h2 id="5-People-in-the-Optimized-Process"><a href="#5-People-in-the-Optimized-Process" class="headerlink" title="5. People in the Optimized Process"></a>5. People in the Optimized Process</h2><p>任何软件开发过程都依赖与实现它的人员的质量。优化过程在以下几个方面(对人员)提供帮助：</p>
+<ul>
+<li>1、它为管理部门提供了一种方法，可以让管理部门了解哪里需要帮助以及如何向人们提供他们所需的支持</li>
+<li>2、通过优化过程，专业人员可以通过简洁的量化术语进行沟通(意思就是极大减少了沟通成本)</li>
+<li>3、人们通常花费大量时间来纠正和弥补他人的错误。优化过程可以为专业人员了解他们的工作绩效和如何改进工作绩效提供一个框架。</li>
+</ul>
+<p>优化过程为专业工作提供了一个<strong>有纪律的环境</strong>，但是很多程序员会对它对他们工作的影响感到紧张(理解理解，毕竟谁都不愿意在太disciplined的地方工作)，但是在高科技产业种，纪律是正常而自然的，不管是半导体设计师还是生物工程或者医学研究什么其他的领域，松散的工作环境都很难有创造力(都去玩手机了自然没有了)。</p>
+<h2 id="6-The-Need-for-the-Optimized-Process"><a href="#6-The-Need-for-the-Optimized-Process" class="headerlink" title="6. The Need for the Optimized Process"></a>6. The Need for the Optimized Process</h2><p>软件缺陷引发灾难的例子数不胜数，从火箭升空到导弹发射。如果不采取有序的步骤改进我们的软件过程，低质量代码的风险将变得难以承受。</p>
+<p>软件质量不仅是管理问题，也是一个经济问题。你可以做更多的检查运行更多的测试。但是这样做既花费时间也花费金钱。只有经过优化的过程，产生的数据才能用来了解这种工作的成本和收益。因此，优化的过程为<strong>软件质量的显著提高</strong>以及<strong>同时提高生产力</strong>提供了基础。</p>
+<h2 id="7-Conclusion"><a href="#7-Conclusion" class="headerlink" title="7. Conclusion"></a>7. Conclusion</h2><p>这个<strong>软件开发成熟度模型</strong> 已经被证明合理的表现了软件开发组织改进的具体方法。它为++评估这些组织++和++确定立即改进的优先领域++提供了一个框架。它还帮助确定哪里的先进技术在改进软件开发过程中最有价值。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/love/" rel="tag"># love</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/06/19/reading-6/" rel="next" title="reading_6 Sustainable IT outsourcing success">
+                <i class="fa fa-chevron-left"></i> reading_6 Sustainable IT outsourcing success
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/yezang.gif" alt="ZhangTW">
+            
+              <p class="site-author-name" itemprop="name">ZhangTW</p>
+              <p class="site-description motion-element" itemprop="description">breath、music、keep hydrated and love</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ZtwZx" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:gsbyztw@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons">
+              </a>
+            </div>
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Characterizing-the-Software-Process-A-Maturity-Framework"><span class="nav-number">1.</span> <span class="nav-text">Characterizing the Software Process A Maturity Framework</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Introduction"><span class="nav-number">1.1.</span> <span class="nav-text">1. Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本文描述了SEI项目的初试结果，该项目为美国国防部提供了一个描述软件开发组织能力的方法。-该项目提出的软件处理成熟度框架-the-software-process-maturity-framework-可以被国防部或者软件开发组织来评估他们自己的能力，并确定最重要的改进区域"><span class="nav-number">1.2.</span> <span class="nav-text">本文描述了SEI项目的初试结果，该项目为美国国防部提供了一个描述软件开发组织能力的方法。 该项目提出的软件处理成熟度框架(the software process maturity framework) 可以被国防部或者软件开发组织来评估他们自己的能力，并确定最重要的改进区域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Software-Development-Processes"><span class="nav-number">1.3.</span> <span class="nav-text">2. Software Development Processes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-An-Ideal-Software-Process"><span class="nav-number">1.4.</span> <span class="nav-text">3. An Ideal Software Process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Process-Maturity-Levels"><span class="nav-number">1.5.</span> <span class="nav-text">4. Process Maturity Levels</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-The-Initial-Process"><span class="nav-number">1.5.1.</span> <span class="nav-text">4.1. The Initial Process</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-The-Repeatable-Process"><span class="nav-number">1.5.2.</span> <span class="nav-text">4.2. The Repeatable Process</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-The-Defined-Process"><span class="nav-number">1.5.3.</span> <span class="nav-text">4.3. The Defined Process</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-The-Managed-Process"><span class="nav-number">1.5.4.</span> <span class="nav-text">4.4. The Managed Process</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-The-Optimized-Process"><span class="nav-number">1.5.5.</span> <span class="nav-text">4.5. The Optimized Process</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-People-in-the-Optimized-Process"><span class="nav-number">1.6.</span> <span class="nav-text">5. People in the Optimized Process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-The-Need-for-the-Optimized-Process"><span class="nav-number">1.7.</span> <span class="nav-text">6. The Need for the Optimized Process</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Conclusion"><span class="nav-number">1.8.</span> <span class="nav-text">7. Conclusion</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZhangTW</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+<!-- 新增访客统计代码 -->
+
+<div class="busuanzi-count">
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      访问用户： <span class="busuanzi-value" id="busuanzi_value_site_uv"></span> 人
+    </span>
+    <div class="powered-by"></div>
+    <span class="site-uv">
+      <i class="fa fa-eye"></i>
+      访问次数： <span class="busuanzi-value" id="busuanzi_value_site_pv"></span> 次
+    </span>
+    <!-- 博客字数统计 -->
+    <span class="site-pv">
+      <i class="fa fa-pencil"></i>
+      博客全站共： <span class="post-count"></span> 字
+    </span>
+</div>
+<!-- 新增访客统计代码 END-->
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WX4FBXXFKE4F",
+    "geolocation": "enabled",
+    "position": "top-right",
+    "margin": "10px 10px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "UDD5CB353E",
+    "hash": "0cc7e12d6fa13fb44dd4732a8039cb01"
+});
+tpwidget("show");</script>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false}});</script></body>
+</html>
